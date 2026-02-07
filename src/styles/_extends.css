@@ -18,11 +18,11 @@
 }
 
 %u-text {
-  font: var(--fw, 400) var(--fs, var(--font-size-base)) / var(--fh, 1.2) var(--font-inter);
+  font: var(--fw, 400) var(--fs, var(--font-size-base)) / var(--fh, 1.2) var(--font-fira-sans);
   letter-spacing: var(--ls, -0.01em);
 }
 
 %u-heading {
-  font: var(--fw, 350) var(--fs, var(--font-size-base)) / var(--lh, 1.2) var(--font-roboto-slab);
+  font: var(--fw, 350) var(--fs, var(--font-size-base)) / var(--lh, 1.2) var(--font-poetsen-one);
   letter-spacing: var(--ls, -0.01em);
 }

@@ -12,15 +12,15 @@ export default defineConfig({
     fonts: [
       {
         provider: fontProviders.google(),
-        name: "Roboto Slab",
-        cssVariable: "--font-roboto-slab",
+        name: "Poetsen One",
+        cssVariable: "--font-poetsen-one",
         weights: ["100 900"],
       },
       {
         provider: fontProviders.google(),
-        name: "Inter",
-        cssVariable: "--font-inter",
-        weights: ["100 900"],
+        name: "Fira Sans",
+        cssVariable: "--font-fira-sans",
+        weights: ["500"],
       },
     ],
   },

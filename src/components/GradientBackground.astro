@@ -4,10 +4,10 @@ interface Props {
 }
 
 const defaultColors = [
-  [180, 150, 250],
-  [236, 231, 253],
-  [141, 115, 245],
-  [220, 210, 250],
+  [252, 200, 107], // dark
+  [242, 237, 229], // lightest
+  [255, 188, 66], // darkest
+  [246, 221, 177], // light
 ];
 
 const { colors = defaultColors } = Astro.props;
@@ -21,7 +21,7 @@ const { colors = defaultColors } = Astro.props;
   class GradientBackground extends HTMLElement {
     step = 0;
     colorIndices = [0, 1, 2, 3];
-    gradientSpeed = 0.002;
+    gradientSpeed = 0.010;
     colors: number[][];
 
     constructor() {

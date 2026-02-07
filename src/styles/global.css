@@ -14,13 +14,13 @@
   --rgb-white: 255, 255, 255;
   --rgb-black: 0, 0, 0;
 
-  --rgb-text: 11, 31, 91; /* #0b1f5b */
-  --rgb-text-alt: 132, 142, 172; /* #848eac */
-  --rgb-brand-1: 141, 115, 245; /* #8d73f5 */
-  --rgb-brand-2: 221, 232, 184; /* #dde8b8 */
-  --rgb-brand-3: 236, 231, 253; /* #ece7fd */
-  --rgb-brand-4: 232, 242, 207; /* #e8f2cf */
-  --rgb-brand-5: 140, 175, 49; /* #8caf31 */
+  --rgb-text: 51, 51, 51;
+  --rgb-text-alt: 132, 142, 172;
+  --rgb-brand-1: 193, 18, 31; /* red */
+  --rgb-brand-2: 255, 188, 66;
+  --rgb-brand-3: 242, 237, 229;
+  --rgb-brand-4: 232, 242, 207;
+  --rgb-brand-5: 140, 175, 49;
 
   --color-text: rgb(var(--rgb-text));
   --color-text-alt: rgb(var(--rgb-text-alt));
@@ -74,7 +74,7 @@ body {
   margin: 0;
   color: var(--color-text);
   background: var(--color-bg);
-  font: 400 var(--font-size-base) / 1.2 var(--font-inter);
+  font: 400 var(--font-size-base) / 1.2 var(--font-sniglet);
 }
 
 a {
