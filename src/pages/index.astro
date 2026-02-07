@@ -24,44 +24,46 @@ import logo8 from "../assets/logoipsum-331.svg";
 
 <Layout title="Home">
   <div id="hero-steps-wrapper">
-    <HeroHome
-      transparentBg
-      title="Jesús hace toda la diferencia!"
-      subtitle="Jesús dijo: “Dejen que los niños vengan…” Marcos 10:13-16"
-      cta={{
-        title: "Conoce más",
-        url: "#",
-      }}
-    />
+    <div class="content-layer">
+      <HeroHome
+        transparentBg
+        title="Jesús hace toda la diferencia!"
+        subtitle="Jesús dijo: “Dejen que los niños vengan…” Marcos 10:13-16"
+        cta={{
+          title: "Conoce más",
+          url: "#",
+        }}
+      />
 
-    <Introducing
-      title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
-      text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
-      cta={{
-        title: "Prueba",
-        url: "#",
-      }}
-    />
+      <Introducing
+        title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+        cta={{
+          title: "Prueba",
+          url: "#",
+        }}
+      />
 
-    <StepsTimeline
-      title="How it works"
-      items={[
-        {
-          title: "Set up in minutes",
-          text: "Create your workspace, invite your team, and configure projects effortlessly—no complex onboarding or technical setup required.",
-        },
-        {
-          title: "Collaborate without friction",
-          text: "Centralize communication, assets, and tasks in one place so everyone stays aligned and productive.",
-        },
-        {
-          title: "Deliver measurable results",
-          text: "Track progress in real time, optimize workflows, and ship projects faster with complete visibility.",
-        },
-      ]}
-    />
+      <StepsTimeline
+        title="How it works"
+        items={[
+          {
+            title: "Set up in minutes",
+            text: "Create your workspace, invite your team, and configure projects effortlessly—no complex onboarding or technical setup required.",
+          },
+          {
+            title: "Collaborate without friction",
+            text: "Centralize communication, assets, and tasks in one place so everyone stays aligned and productive.",
+          },
+          {
+            title: "Deliver measurable results",
+            text: "Track progress in real time, optimize workflows, and ship projects faster with complete visibility.",
+          },
+        ]}
+      />
+    </div>
+    <GL />
   </div>
-  <GL triggerSelector="#hero-steps-wrapper" />
 
   <GalleryText
     title="Designed for teams that value clarity and speed"
@@ -251,5 +253,18 @@ import logo8 from "../assets/logoipsum-331.svg";
   #hero-steps-wrapper {
     position: relative;
     z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .content-layer {
+    grid-area: 1 / 1;
+    position: relative;
+    z-index: 2;
+  }
+  
+  #hero-steps-wrapper > :global(.stack-container) {
+    grid-area: 1 / 1;
+    z-index: 0;
   }
 </style>
