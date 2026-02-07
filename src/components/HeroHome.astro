@@ -6,13 +6,14 @@ interface Props {
   title: string;
   subtitle?: string;
   cta?: Link;
+  transparentBg?: boolean;
 }
 
-const { title, subtitle, cta } = Astro.props;
+const { title, subtitle, cta, transparentBg } = Astro.props;
 ---
 
 <div class="sy-hero-home">
-  <div class="bg"></div>
+  <div class:list={["bg", { "is-transparent": transparentBg }]}></div>
   <div class="u-container container">
     <div class="inner">
       <div class="content">
@@ -87,6 +88,16 @@ const { title, subtitle, cta } = Astro.props;
 
     &:after {
       backdrop-filter: blur(5px);
+    }
+
+    &.is-transparent {
+      &:before {
+        background: transparent;
+        mask: none;
+      }
+      &:after {
+        backdrop-filter: none;
+      }
     }
   }
 

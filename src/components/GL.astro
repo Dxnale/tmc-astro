@@ -1,5 +1,10 @@
 ---
-// Simulamos algunas imágenes para el ejemplo
+interface Props {
+  triggerSelector?: string;
+}
+
+const { triggerSelector } = Astro.props;
+
 const cards = [
   { id: 1, color: "#FF6B6B", img: "https://picsum.photos/id/10/600/800" },
   { id: 2, color: "#4ECDC4", img: "https://picsum.photos/id/20/600/800" },
@@ -8,7 +13,7 @@ const cards = [
 ];
 ---
 
-<section class="stack-container">
+<section class="stack-container" data-trigger-selector={triggerSelector}>
   <div class="cards-wrapper">
     {cards.map((card, index) => (
       <div class="card" style={`z-index: ${cards.length - index}; background-image: url(${card.img})`}>
@@ -36,12 +41,15 @@ const cards = [
     transformOrigin: "center top",
   });
 
+  const triggerSelector = container.dataset.triggerSelector;
+  const triggerElement = triggerSelector ? document.querySelector(triggerSelector) : container;
+
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".stack-container",
+      trigger: triggerElement,
       start: "top top", // Empieza cuando el contenedor toca el top
-      end: `+=${cards.length * 100}%`, // La duración del scroll depende de cuántas cartas haya
-      pin: true, // "Grapamos" el contenedor
+      end: "bottom bottom", // Termina cuando el contenedor termina
+      pin: !triggerSelector, // Solo pin si no hay trigger externo selector, si hay trigger externo asumimos fixed por CSS
       scrub: 1, // Suavizamos el movimiento vinculado al scroll
       // markers: true, // Descomenta para depurar
     },
@@ -77,8 +85,20 @@ const cards = [
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #111; /* Color de fondo */
+    /* background-color: #111; Eliminar background para que sea transparente si se desea */
     overflow: hidden;
+    position: sticky;
+    top: 0;
+  }
+  
+  :global(.stack-container[data-trigger-selector]) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none; /* Permitir clicks a través */
   }
 
   .cards-wrapper {
