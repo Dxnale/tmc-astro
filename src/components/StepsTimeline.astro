@@ -56,9 +56,10 @@ const { title, items } = Astro.props;
       new ScrollTrigger({
         trigger: itemsWrapper,
         pin: wrapper,
-        start: "center center",
+        start: "center center+=120rem",
         end: () => `+=${window.innerHeight * 2}px`,
         invalidateOnRefresh: true,
+        refreshPriority: 1,
         onUpdate: (st) => {
           const index = Math.round(st.progress * (items.length - 1));
           if (index !== current) {
@@ -125,6 +126,10 @@ const { title, items } = Astro.props;
     --lh: 1;
     max-width: 10em;
     margin-bottom: 1em;
+
+    @media (--mq-phone) {
+      --fs: 2rem;
+    }
   }
 
   .wrapper {
@@ -139,6 +144,8 @@ const { title, items } = Astro.props;
     padding-left: 4rem;
     position: relative;
     backdrop-filter: blur(6px) saturate(1.05);
+    background-color: rgba(247, 248, 242, 0.5);
+    border-radius: 1rem;
 
     @media (--mq-desktop-sm) {
       max-width: 34rem;

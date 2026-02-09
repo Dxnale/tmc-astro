@@ -10,7 +10,6 @@ import Plans from "../components/Plans.astro";
 import Statements from "../components/Statements.astro";
 import Introducing from "../components/Introducing.astro";
 import GL from "../components/GL.astro";
-import GLPlaces from "../components/GlPlaces.astro";
 
 import logo1 from "../assets/logoipsum-344.svg";
 import logo2 from "../assets/logoipsum-350.svg";
@@ -35,19 +34,19 @@ import logo8 from "../assets/logoipsum-331.svg";
         }}
       />
       <StepsTimeline
-        title="How it works"
+        title="Los niños son el presente de las misiones"
         items={[
           {
-            title: "Set up in minutes",
-            text: "Create your workspace, invite your team, and configure projects effortlessly—no complex onboarding or technical setup required.",
+            title: "Son los más fructíferos",
+            text: "60-85% de los cristianos vinieron a Cristo como niños.",
           },
           {
-            title: "Collaborate without friction",
-            text: "Centralize communication, assets, and tasks in one place so everyone stays aligned and productive.",
+            title: "Son la mayoría de los no alcanzados",
+            text: "Solo el 15% de los recursos se destinan a llegar a los niños.",
           },
           {
-            title: "Deliver measurable results",
-            text: "Track progress in real time, optimize workflows, and ship projects faster with complete visibility.",
+            title: "Los niños tienen toda su vida para vivir para el Señor",
+            text: "Al llegar a Cristo de niños, pueden vivir toda su vida para el Señor, impactando a generaciones futuras.",
           },
         ]}
       />
@@ -55,19 +54,27 @@ import logo8 from "../assets/logoipsum-331.svg";
     <GL />
   </div>
 
-  <GalleryText
-    title="Designed for teams that value clarity and speed"
-    text="A clean interface, powerful features, and thoughtful details come together to help your team move faster—without sacrificing quality."
+  <Introducing
+    title="Nuestra misión"
+    text="Es ganar a los niños y jóvenes del mundo para Cristo; ayudarlos a alcanzar su madurez espiritual, nutrirlos a través de cursos bíblicos en sus iglesias locales. Esto se logra por medio de un ministerio directo con las iglesias y multiplicando nuestros esfuerzos a través de asociaciones claves en todo el mundo."
     cta={{
-      title: "Try It Today",
+      title: "Leer más",
+      url: "#",
+    }}
+  />
+  <GalleryText
+    title="Lo que hacemos"
+    text="The Mailbox Club facilita la traducción, producción y distribución de lecciones bíblicas en todo el mundo para personas de todas las edades, con especial énfasis en niños y jóvenes. Llegamos a muchos más niños de manera efectiva al asociarnos con ministerios estratégicos, que incluyen la iglesia local. Apoyamos a nuestros socios ministeriales capacitándolos adecuadamente y compartiendo las mejores prácticas que hemos aprendido durante casi 50 años de ministerio de seguimiento."
+    cta={{
+      title: "Leer más",
       url: "#",
     }}
     images={[
       {
-        alt: "Dashboard overview",
-        src: "/image-1.jpg",
-        width: 6000,
-        height: 4000,
+        alt: "Children",
+        src: "/image-1.webp",
+        width: 1200,
+        height: 1200,
       },
       {
         alt: "Project collaboration view",
@@ -83,10 +90,10 @@ import logo8 from "../assets/logoipsum-331.svg";
       },
     ]}
     marqueeTexts={[
-      "Creative Firepower",
-      "Built for Speed",
-      "Trusted by Professionals",
-      "Simple, Transparent Pricing",
+      "Publicamos",
+      "Distribuimos",
+      "Entrenamos",
+      "Ellos enseñan",
     ]}
   />
 
@@ -160,15 +167,6 @@ import logo8 from "../assets/logoipsum-331.svg";
     ]}
   />
 
-  <Introducing
-    title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
-    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
-    cta={{
-      title: "Prueba",
-      url: "#",
-    }}
-  />
-
   <Faqs
     title="Frequently Asked Questions"
     mobileTitle="FAQs"
@@ -238,9 +236,6 @@ import logo8 from "../assets/logoipsum-331.svg";
       },
     ]}
   />
-
-
-  <GLPlaces />
 </Layout>
 
 <style>
@@ -254,6 +249,7 @@ import logo8 from "../assets/logoipsum-331.svg";
     z-index: 2;
     display: grid;
     grid-template-columns: 1fr;
+
   }
 
   .content-layer {

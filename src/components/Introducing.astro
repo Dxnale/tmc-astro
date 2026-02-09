@@ -28,6 +28,10 @@ const { title, text, cta } = Astro.props;
   .container {
     margin-bottom: 8rem;
     position: relative;
+
+    @media (--mq-phone) {
+      margin-top: 10rem;
+    }
   }
 
   .inner {
@@ -47,9 +51,13 @@ const { title, text, cta } = Astro.props;
   }
 
   h2 {
-    --fs: 3rem;
+    --fs: 5rem;
     --lh: 1.1;
     max-width: 20em;
+
+    @media (--mq-phone) {
+      --fs: 3rem;
+    }
   }
 
   p {
