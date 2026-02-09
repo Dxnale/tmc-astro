@@ -11,14 +11,11 @@ import Statements from "../components/Statements.astro";
 import Introducing from "../components/Introducing.astro";
 import GL from "../components/GL.astro";
 
-import logo1 from "../assets/logoipsum-344.svg";
-import logo2 from "../assets/logoipsum-350.svg";
-import logo3 from "../assets/logoipsum-345.svg";
-import logo4 from "../assets/logoipsum-385.svg";
-import logo5 from "../assets/logoipsum-375.svg";
-import logo6 from "../assets/logoipsum-378.svg";
-import logo7 from "../assets/logoipsum-346.svg";
-import logo8 from "../assets/logoipsum-331.svg";
+import logo1 from "../assets/core.png";
+import logo2 from "../assets/Explorers.png";
+import logo3 from "../assets/PathFinder-Flat-1.png";
+import logo4 from "../assets/Seekers-1.png";
+import logo5 from "../assets/Voyagers.png";
 ---
 
 <Layout title="Home">
@@ -77,13 +74,13 @@ import logo8 from "../assets/logoipsum-331.svg";
         height: 1200,
       },
       {
-        alt: "Project collaboration view",
+        alt: "Children2",
         src: "/image-2.jpg",
         width: 2689,
         height: 4032,
       },
       {
-        alt: "Analytics and reporting",
+        alt: "Children3",
         src: "/image-3.jpg",
         width: 3734,
         height: 5359,
@@ -100,16 +97,20 @@ import logo8 from "../assets/logoipsum-331.svg";
   <Statements
     items={[
       {
-        title: "For modern teams",
-        text: "Every feature is designed to reduce complexity and maximize execution speed.",
+        title: "Publicamos",
+        text: "Escribimos y publicamos nuestras propias lecciones. Traducido a 100 idiomas",
       },
       {
-        title: "Scales as you grow",
-        text: "Whether you’re a solo creator or a global team, the platform adapts to your workflow.",
+        title: "Distribuimos",
+        text: "Imprimimos y distribuimos en conjunto con socios. Nos asociamos a nivel mundial con los principales ministerios",
       },
       {
-        title: "Real outcomes",
-        text: "Less busywork, more progress—so you can deliver meaningful results consistently.",
+        title: "Entrenamos",
+        text: "Formamos líderes que forman maestros voluntarios. Involucramos a cientos de miles de voluntarios (líderes + maestros). Involucramos a decenas de miles de iglesias locales",
+      },
+      {
+        title: "Ellos enseñan",
+        text: "Los voluntarios enseñan a los niños durante 6-10 meses. Vemos un gran porcentaje de niños que toman decisiones de salvación. Los estudiantes son discipulados: aprenden sobre Dios y cómo seguir a Jesús",
       },
     ]}
   />
@@ -117,25 +118,23 @@ import logo8 from "../assets/logoipsum-331.svg";
   <TextMarquee
     class="marquee"
     texts={[
-      "Creative Firepower",
-      "Built for Speed",
-      "Trusted by Professionals",
-      "Simple, Transparent Pricing",
+      "Dios mueve los corazones para llegar a los niños",
+      "Pero Dios tenía planes más grandes",
+      "Dios expandió el ministerio a 86 países",
     ]}
   />
 
   <Plans
-    title="Plans & Pricing"
-    subtitle="Start for free, upgrade when you’re ready. No hidden fees, no long-term commitments."
+    title="Material"
+    subtitle="Nuestro material está centrado en Cristo, es fácil de entender y capaz de guiar a los niños a Cristo y también ayudarlos a fortalecerse en su fe. Aunque nos centramos principalmente en niños y adolescentes, también tenemos material para adultos."
     items={[
       {
-        title: "Free Plan",
+        title: "Recursos para",
         price: {
-          amount: "$0",
-          duration: "month",
+          amount: "Niños",
         },
         link: {
-          title: "Get Started Free",
+          title: "Más información",
           url: "#",
         },
         features: [
@@ -147,13 +146,12 @@ import logo8 from "../assets/logoipsum-331.svg";
         ],
       },
       {
-        title: "Premium Plan",
+        title: "Recursos para",
         price: {
-          amount: "$20",
-          duration: "month",
+          amount: "Jóvenes",
         },
         link: {
-          title: "Start 14-Day Trial",
+          title: "Más información",
           url: "#",
         },
         features: [
@@ -164,38 +162,65 @@ import logo8 from "../assets/logoipsum-331.svg";
           { title: "Custom onboarding assistance" },
         ],
       },
+      {
+        title: "Recursos para",
+        price: {
+          amount: "Adolescentes",
+        },
+        link: {
+          title: "Más información",
+          url: "#",
+        },
+        features: [
+          { title: "Up to 50 accounts" },
+          { title: "Unlimited projects" },
+          { title: "Chat support", disabled: true },
+          { title: "Email support", disabled: true },
+          { title: "Custom onboarding", disabled: true },
+        ],
+      },
     ]}
   />
 
   <Faqs
-    title="Frequently Asked Questions"
+    title="Preguntas frecuentes"
     mobileTitle="FAQs"
-    subtitle="Quick answers to the most common questions."
+    subtitle="Respuestas rápidas a las preguntas más comunes."
     items={[
       {
-        question: "Who is this platform for?",
+        question: "¿Cuál es la misión de The Mailbox Club?",
         answer:
-          "It’s built for creators, startups, agencies, and teams who want to move faster without sacrificing quality or control.",
+          "Su misión es ganar a los niños y jóvenes del mundo para Cristo, ayudarlos a alcanzar su madurez espiritual y nutrirlos a través de cursos bíblicos en sus iglesias locales.",
       },
       {
-        question: "Can I upgrade or downgrade at any time?",
+        question: "¿Qué es The Mailbox Club?",
         answer:
-          "Yes. You can change plans whenever you need, with no penalties or long-term contracts.",
+          "The Mailbox Club es un movimiento internacional que busca hacer que la Biblia sea accesible para todos los niños y jóvenes del mundo. Su objetivo es que los niños y jóvenes puedan aprender sobre Dios y cómo seguir a Jesús a través de cursos bíblicos en sus iglesias locales.",
       },
       {
-        question: "Does the free plan really cost nothing?",
+        question: "¿Cuáles son los medios de contacto directo?",
         answer:
-          "Absolutely. The free plan gives you full access to core features so you can evaluate the platform with confidence.",
+          "El correo electrónico tmc.iberica@gmail.com y el teléfono +34 643 000 000",
       },
       {
-        question: "Is my data secure?",
+        question: "¿Qué datos demuestran sobre la conversión de cristianos en la niñez?",
         answer:
-          "Yes. We use industry-standard security practices to protect your data and ensure reliability.",
+          "Indican que entre el 60% y el 85% de los cristianos vinieron a Cristo siendo niños, y que el 85% de los cristianos son salvos antes de los 14 años.",
       },
       {
-        question: "Do you offer support during onboarding?",
+        question: "¿Qué datos demuestran sobre la conversión de cristianos en la adolescencia?",
         answer:
-          "Premium users receive guided onboarding and priority support to ensure a smooth start.",
+          "Se estima que el 85% de los cristianos son salvos antes de los 14 años.",
+      },
+      {
+        question: "Además de los materiales clasificados por edad, ¿qué otros títulos específicos aparecen en los enlaces de recursos?",
+        answer:
+          "'Hora del cuento', 'Amor, noviazgo y matrimonio', 'Folletos', 'Eres amado' y '¿Cómo llegar al cielo?'",
+      },
+      {
+        question: "¿Qué significa la frase 'Ellos enseñan'?",
+        answer:
+          "La frase 'Ellos enseñan' se refiere a los voluntarios que enseñan a los niños durante 6-10 meses. Vemos un gran porcentaje de niños que toman decisiones de salvación. Los estudiantes son discipulados: aprenden sobre Dios y cómo seguir a Jesús",
       },
     ]}
   />
@@ -215,24 +240,8 @@ import logo8 from "../assets/logoipsum-331.svg";
         alt: "Logo 4",
       },
       {
-        src: logo8.src,
-        alt: "Logo 8",
-      },
-      {
         src: logo5.src,
         alt: "Logo 5",
-      },
-      {
-        src: logo6.src,
-        alt: "Logo 6",
-      },
-      {
-        src: logo2.src,
-        alt: "Logo 2",
-      },
-      {
-        src: logo7.src,
-        alt: "Logo 7",
       },
     ]}
   />

@@ -6,7 +6,6 @@ interface Item {
   title: string;
   price: {
     amount: string;
-    duration: string;
   };
   link: Link;
   features: {
@@ -17,7 +16,7 @@ interface Item {
 interface Props {
   title: string;
   subtitle: string;
-  items: [Item, Item];
+  items: [Item, Item, Item];
 }
 
 const { title, subtitle, items } = Astro.props;
@@ -40,9 +39,6 @@ const { title, subtitle, items } = Astro.props;
               </h3>
               <p class="u-heading price">
                 <span data-sy-reveal="words">{item.price.amount}</span>
-                <span class="duration u-text" data-sy-reveal="words">
-                  /{item.price.duration}
-                </span>
               </p>
               <ul class="u-text features">
                 {item.features.map((feat) => (
@@ -166,7 +162,7 @@ const { title, subtitle, items } = Astro.props;
     align-items: center;
     gap: 0.1em;
     margin: 0;
-    --fs: 3rem;
+    --fs: 2.5rem;
     --fw: 400;
   }
 
